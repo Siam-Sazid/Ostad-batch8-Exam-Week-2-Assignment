@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 
 Widget CustomAppBar(String text){
   return  Padding(
-    padding: const EdgeInsets.only(top: 16),
+    padding: const EdgeInsets.fromLTRB(20, 50, 0, 0),
     child: Row(
-
       children: [
-        SizedBox(height: 20,),
+      //  SizedBox(height: 50,),
         Text(text,
             style: const TextStyle(
 
@@ -26,20 +25,18 @@ Widget CustomAppBar(String text){
           IconButton(
             onPressed: (){},
             icon: Icon(Icons.call), )
-
         ],
-
-
-
       ),
-
-
-
       ],
-
-
-
     ),
+  );
+}
+
+Widget CustomCircleAvatarWithIcon(IconData icon){
+  return CircleAvatar(
+    radius: 100,
+    child:  IconButton(onPressed: (){}, icon: Icon(icon,size: 100,)),
   );
 
 }
+

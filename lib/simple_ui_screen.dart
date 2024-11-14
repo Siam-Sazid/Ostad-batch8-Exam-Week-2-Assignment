@@ -16,13 +16,32 @@ class _SimpleUiScreenState extends State<SimpleUiScreen> {
       appBar: AppBar(
          backgroundColor: Colors.yellowAccent.shade700,
         automaticallyImplyLeading: false,
-        flexibleSpace: Padding(
-          padding: const EdgeInsets.fromLTRB(35.0,20,8,8),
-          child: CustomAppBar('My Profile'),
-        ),
+        flexibleSpace: CustomAppBar('My Profile'),
 
       ),
-
+body: SingleChildScrollView(
+  child: Center(
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+  
+         children: [
+  
+           CustomCircleAvatarWithIcon(Icons.icecream_outlined),
+           const Text('Ice cream is very delicious right?'),
+           const SizedBox(height: 20,),
+           CustomCircleAvatarWithIcon(Icons.code),
+           const Text('Programming is not boring if you love it'),
+           const SizedBox(height: 20,),
+           CustomCircleAvatarWithIcon(Icons.egg_outlined),
+           const Text('If you submit code directly from chatgpt, then marks will be 0'),
+         ],
+  
+  
+      ),
+    ),
+  ),
+)
     );
   }
 }
